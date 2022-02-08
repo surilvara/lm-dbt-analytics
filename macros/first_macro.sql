@@ -10,6 +10,7 @@ order by 1
 {% set results = run_query(key_retrieval_query) %}
 
 {% if execute %}
+-- The above set returns a table so we need to access the columns values and add to a list
 {% set results_list = results.columns[0].values() %}
 {% else %}
 {% set results_list = [] %}
