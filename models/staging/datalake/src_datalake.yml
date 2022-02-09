@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: test
+  - name: datalake
     database: datalake-328011
-    schema:
+    schema: test
     tables:
       - name: media
       - name: med_tagh_mth
