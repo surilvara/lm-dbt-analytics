@@ -1,3 +1,3 @@
 # lm-dbt-analytics
 
-First edit in UI
+Installed dbt-utils for additional functions - https://hub.getdbt.com/dbt-labs/dbt_utils/latest/
