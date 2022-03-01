@@ -3,10 +3,23 @@ version: 2
 sources:
   - name: dockertest_bq
     database: datalake-328011
-    schema: public
+    schema: docker_airbyte
     tables:
-      - name: docker_airbyte_users
+      - name: artists
         loaded_at_field: _airbyte_normalized_at
         freshness:
           warn_after: {count: 24, period: hour}
           error_after: {count: 48, period: hour}
+
+models:
+  - name: stg_artists_base_model
+    description: List of artists, unique artist per row
+    columns:
+      - name: name
+        tests: 
+          - unique
+          - not_null
+      - name: artist_id
+        tests: 
+          - not_null
+          - unique

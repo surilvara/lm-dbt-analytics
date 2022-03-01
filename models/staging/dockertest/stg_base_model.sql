@@ -1,1 +1,0 @@
-select * from {{ source('dockertest_bq', 'docker_airbyte_users') }}
